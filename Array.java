@@ -1,37 +1,21 @@
 package com.company;
-        import java.util.Scanner;
 
+        import java.util.*;
 public class Array {
-    public static void main(String args[]) {
-        int a, key, n, flag = 0;
-
+    public static void main(String[] args)
+    {
+        int a[] = {5, 12, 14, 6, 78, 19, 1, 23, 26, 35, 37, 7, 52, 86, 47};
         Scanner s = new Scanner(System.in);
-        System.out.println("enter the size of an array");
-        n = s.nextInt();
-        int arr[] = new int[n];
-        System.out.println("enter elements into an array");
-
-        for(a = 0; a < n; a++)
+        System.out.println("enter searching value");
+        int key = s.nextInt();
+        for (int i = 0; i < 15; i++)
         {
-            arr[a] = s.nextInt();
+            if(key==a[i])
+            {
 
-
-        }
-
-        System.out.println("enter element to search");
-        key = s.nextInt();
-        for (a = 0; a < n; a++) {
-            if (arr[a] == key) {
-                flag = 1;
-
-                break;
+                System.out.println(key + "is found at index" + i);
             }
         }
-        if (flag == 1) {
-            System.out.println("key found" + key);
-
-        }
-
     }
 }
 
